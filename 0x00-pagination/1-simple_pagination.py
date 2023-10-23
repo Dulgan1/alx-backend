@@ -4,7 +4,7 @@ import csv
 import math
 from typing import List
 
-index_range = __import__('0-simple_helper_function').index_range
+#index_range = __import__('0-simple_helper_function').index_range
 
 
 class Server:
@@ -38,3 +38,12 @@ class Server:
             return self.dataset()[start, end]
         except IndexError:
             return []            
+
+
+def index_range(page: int, page_size: int) -> tuple:
+    """The function should return a tuple of size two containing
+    a start index and an end index corresponding to the range of
+    indexes to return in a list for those particular pagination parameters.
+    Page numbers are 1-indexed, i.e. the first page is page 1.
+    """
+    return ((page * page_size) - page_size, page * page_size)
