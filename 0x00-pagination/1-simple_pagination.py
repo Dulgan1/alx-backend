@@ -33,10 +33,8 @@ class Server:
         assert type(page_size) is int and page_size > 0
 
         start, end = index_range(page, page_size)
-        
+
         try:
             return self.dataset()[start, end]
         except IndexError:
-            return []
-
-            
+            return []            
