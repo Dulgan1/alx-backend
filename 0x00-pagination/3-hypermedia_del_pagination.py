@@ -46,7 +46,8 @@ class Server:
 
         dataset = self.indexed_dataset()
 
-        assert type(index) is int and index in range(len(dataset))
+        assert type(index) is int and index in dataset.keys()
+
         rows = []
         i = index
         j = index + page_size
