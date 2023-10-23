@@ -35,6 +35,6 @@ class Server:
         start, end = index_range(page, page_size)
 
         try:
-            return self.dataset()[start, end]
+            return self.dataset()[start:end]
         except IndexError:
             return []
