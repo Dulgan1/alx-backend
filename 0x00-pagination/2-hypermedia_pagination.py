@@ -38,7 +38,7 @@ class Server:
             return self.dataset()[start, end]
         except IndexError:
             return []
-    def get_hyper(self, page: int = 1, page_size: int = 10) -> dicy:
+    def get_hyper(self, page: int = 1, page_size: int = 10) -> dict:
         page_data = self.get_page(page, page_size)
         total_pages = math.ceil(len(self.dataset()) / page_size)
 
