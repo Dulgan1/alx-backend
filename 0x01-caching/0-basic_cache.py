@@ -15,7 +15,7 @@ class BasicCache(BaseCache):
     def put(self, key, item):
         """Sets data with key and item into cache data """
         if key and item:
-            self.cache_data.update({key : item})
+            self.cache_data.update({key: item})
 
     def get(self, key):
         """Gets data with key in cache data"""
