@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """Class BasicCache: a basic cache system"""
 
-BaseCache = __import__('base_caching').BaseCache
+BaseCaching = __import__('base_caching').BaseCaching
 
 
-class BasicCache(BaseCache):
+class BasicCache(BaseCaching):
     """
     Basic Caching system: uses self.cache_data of parent
     methods:
