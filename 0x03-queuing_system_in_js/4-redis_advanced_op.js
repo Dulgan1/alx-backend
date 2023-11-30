@@ -9,3 +9,5 @@ const keys = ['Portland', 'Seattle', 'New York', 'Bogota', 'Cali', 'Paris'];
 const values = [50, 80, 20, 20, 40, 2];
 
 keys.forEach((key, idx) => rClient.hset(hashKey, key, values[idx], redis.print));
+
+client.hgetall(KEY, (err, value) => console.log(value));
