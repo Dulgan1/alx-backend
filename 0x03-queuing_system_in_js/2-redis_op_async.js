@@ -12,13 +12,7 @@ function setNewSchool(schooName, value) {
 }
 
 async function displaySchoolValue() {
-  await asyncGet(schoolName,(error, value) {
-    if (error) {
-      console.log(error);
-      throw error;
-    }
-    console.log(value);
-  });
+  console.log(await asyncGet(schoolName));
 }
 
 displaySchoolValue('Holberton');
